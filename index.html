@@ -36,11 +36,13 @@
         <img style="margin:5vh auto 0 auto; display:block" src="./ner.gif">
         <h1 style="text-align: center;">תהילים ומשניות לעילוי נשמת</h1>
 
-        <form action="/action_page.php" style="margin: 0 auto; width:50%; text-align:center">
+        <form action="/" style="margin: 0 auto; width:50%; text-align:center">
             <label for="fname">שם הנפטר:</label>
-            <input class="form-control" type="text" id="fname" name="fname"><br>
+            <div style="display: flex; justify-content: center;">
+                <input class="form-control" type="text" id="fname" name="fname" style="max-width: 200px;"><br>
+            </div>
 
-            <div class="form-check form-switch" style="display: flex; justify-content: center;">
+            <div class="form-check form-switch" style="display: flex; justify-content: center; margin-top: 3vh;">
                 <input class="form-check-input" type="checkbox" role="switch" id="includeParent" checked
                     onchange="ChangeIncludeParent(event)">
                 <label class="form-check-label" for="includeParent"> כלול שם הורה </label>
@@ -57,8 +59,10 @@
                         id="inlineRadio2" value="option2">
                     <label class="form-check-label" for="inlineRadio2">בת</label>
                 </div>
-
-                <input class="form-control form-check-parent-name" type="text" id="parentName" name="parentName">
+                <div style="display: flex; justify-content: center;">
+                    <input class="form-control form-check-parent-name" type="text" id="parentName" name="parentName"
+                        style="max-width: 200px;">
+                </div>
             </form>
 
             <div style="margin-top: 5vh; text-align: center;">
