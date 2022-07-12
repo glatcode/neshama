@@ -35,6 +35,69 @@
     <div style="margin-right: 25%; margin-left:25%">
         <img style="margin:5vh auto 0 auto; display:block" src="./ner.gif">
         <h1 style="text-align: center;">תהילים ומשניות לעילוי נשמת</h1>
+
+        <form action="/action_page.php" style="margin: 0 auto; width:50%; text-align:center">
+            <label for="fname">שם הנפטר:</label>
+            <input class="form-control" type="text" id="fname" name="fname"><br>
+
+            <div class="form-check form-switch" style="display: flex; justify-content: center;">
+                <input class="form-check-input" type="checkbox" role="switch" id="includeParent" checked
+                    onchange="ChangeIncludeParent(event)">
+                <label class="form-check-label" for="includeParent"> כלול שם הורה </label>
+            </div>
+
+            <form>
+                <div class="form-check form-check-inline" style="margin-top: 2vh;">
+                    <input class="form-check-input form-check-parent-name" type="radio" name="inlineRadioOptions"
+                        id="inlineRadio1" value="option1" checked>
+                    <label class="form-check-label" for="inlineRadio1">בן</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input form-check-parent-name" type="radio" name="inlineRadioOptions"
+                        id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">בת</label>
+                </div>
+
+                <input class="form-control form-check-parent-name" type="text" id="parentName" name="parentName">
+            </form>
+
+            <div style="margin-top: 5vh; text-align: center;">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="checkboxTehilim" value="option1" checked>
+                    <label class="form-check-label" for="checkboxTehilim">תהילים</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="checkboxMeshnayot" value="option2" checked>
+                    <label class="form-check-label" for="checkboxMeshnayot">משניות</label>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <button class="btn btn-success btn-sm" type="submit" style="margin-top: 2vh;">הורד
+                    קובץ PDF</button>
+            </div>
+
+
+            <form>
+                <div role="group" style="margin-top: 5vh; display: flex; justify-content: center;">
+                    <div class="form-check form-check-inline">
+                        <input class="btn-check" type="radio" name="inlineRadioOptions" id="ashcenazCheckbox"
+                            value="option1" checked>
+                        <label class="btn btn-outline-secondary btn-sm" for="ashcenazCheckbox">אשכנז</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="btn-check" type="radio" name="inlineRadioOptions" id="sfaradCheckbox"
+                            value="option2">
+                        <label class="btn btn-outline-secondary btn-sm" for="sfaradCheckbox">ספרד</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="btn-check" type="radio" name="inlineRadioOptions" id="amCheckbox" value="option3">
+                        <label class="btn btn-outline-secondary btn-sm" for="amCheckbox">ע"מ</label>
+                    </div>
+                </div>
+            </form>
+
+        </form>
+
     </div>
 
     <!-- Css flex version -->
