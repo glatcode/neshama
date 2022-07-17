@@ -1,7 +1,8 @@
+const maimForm = document.getElementById("mainForm");
 const includeParent = document.getElementById("includeParent");
 const formParentName = document.getElementsByClassName("form-check-parent-name");
 
-function ChangeIncludeParent(e) {
+function changeIncludeParent(e) {
     if (!e.currentTarget.checked) { }
     Array.prototype.forEach.call(formParentName, (element) => {
         if (!e.currentTarget.checked) {
@@ -11,4 +12,8 @@ function ChangeIncludeParent(e) {
         }
 
     })
+}
+
+function submitMainForm() {
+    console.log(maimForm)
 }
